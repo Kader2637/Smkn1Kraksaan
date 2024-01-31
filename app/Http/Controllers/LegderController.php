@@ -8,12 +8,30 @@ use App\Http\Requests\UpdateLegderRequest;
 
 class LegderController extends Controller
 {
+
+    private Legder $legder;
+    public function __construct(Legder $legder)
+    {
+        return $this->legder = $legder;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('ledger');
+        $totalDebit = Legder::where('type_saldo', 'debit')->sum('saldo');
+        $totalKredit = Legder::where('type_saldo', 'kredit')->sum('saldo');
+        $total = Legder::sum('saldo');
+        $legders = $this->legder->get();
+        return view('ledger', compact('legders' ,'totalDebit','totalKredit' ,'total'));
+    }
+    public function import()
+    {
+        $totalDebit = Legder::where('type_saldo', 'debit')->sum('saldo');
+        $totalKredit = Legder::where('type_saldo', 'kredit')->sum('saldo');
+        $total = Legder::sum('saldo');
+        $legders = $this->legder->get();
+        return view('import.legderexcel', compact('legders' ,'totalDebit','totalKredit' ,'total'));
     }
 
     /**
@@ -29,7 +47,8 @@ class LegderController extends Controller
      */
     public function store(StoreLegderRequest $request)
     {
-        //
+        $this->legder->create($request->all());
+        return redirect()->back()->with('success', 'Berhasil Menambahkan Data');
     }
 
     /**
@@ -53,7 +72,8 @@ class LegderController extends Controller
      */
     public function update(UpdateLegderRequest $request, Legder $legder)
     {
-        //
+        $legder->update($request->all());
+        return back()->with('success', 'Data Berhasil diubah');
     }
 
     /**
@@ -61,6 +81,7 @@ class LegderController extends Controller
      */
     public function destroy(Legder $legder)
     {
-        //
+        $legder->delete();
+        return back()->with('success', 'Data Berhasil dihapus');
     }
 }

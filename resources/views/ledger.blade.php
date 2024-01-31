@@ -209,16 +209,16 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="3" class="text-center border-1">
+                    <td colspan="3" class="text-center border-1" style="font-weight: 600">
                         Jumlah
                     </td>
-                    <td class="text-center border-1">
+                    <td class="text-center border-1" style="font-weight: 600">
                         {{ 'Rp ' . number_format($totalDebit, 0, ',', '.') }}
                     </td>
-                    <td class="text-center border-1">
+                    <td class="text-center border-1" style="font-weight: 600">
                         {{ 'Rp ' . number_format($totalKredit, 0, ',', '.') }}
                     </td>
-                    <td class="text-center border-1">
+                    <td class="text-center border-1" style="font-weight: 600">
                         Total : {{ 'Rp ' . number_format($total, 0, ',', '.') }}
                     </td>
                 </tr>

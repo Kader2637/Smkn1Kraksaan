@@ -3,7 +3,7 @@
     <div class="">
         <div class="d-flex justify-content-between mb-3">
             <p class="text-dark fs-5 " style="font-weight:600">
-                Buku Besar
+                Neraca Awal
             </p>
             <div class="d-flex justify-content-header gap-3">
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target=".adddata">
@@ -23,7 +23,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="myExtraLargeModalLabel">Tambah Buku Besar</h5>
+                    <h5 class="modal-title" id="myExtraLargeModalLabel">Tambah Neraca Awal</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('legder.store') }}" method="post">
@@ -73,7 +73,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="myExtraLargeModalLabel">Edit Buku Besar</h5>
+                    <h5 class="modal-title" id="myExtraLargeModalLabel">Edit Neraca Awal</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form method="post" id="form-update">

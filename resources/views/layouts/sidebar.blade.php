@@ -21,7 +21,7 @@
                 <li>
                     <a href="/legder" class="waves-effect">
                         <i class="bx bx-user"></i>
-                        <span key="t-chat">Buku Besar</span>
+                        <span key="t-chat">Neraca Awal</span>
                     </a>
                 </li>
             </ul>

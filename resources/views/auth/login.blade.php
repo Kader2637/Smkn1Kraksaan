@@ -119,13 +119,12 @@
                     <div class="mt-5 text-center">
 
                         <div>
-                            <p>Belum Mempunyai Akun ? <a href="/register" class="fw-medium text-primary">
-                                Register</a> </p>
+                            
                             <p>©
                                 <script>
                                     document.write(new Date().getFullYear())
                                 </script> Presensi Pegawai <i class="mdi mdi-heart text-danger"></i>
-                                by SMKN 1 KRAKSAAN
+                                by ExcelliaSoft
                             </p>
                         </div>
                     </div>
